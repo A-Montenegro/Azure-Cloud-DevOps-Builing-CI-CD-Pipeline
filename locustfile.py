@@ -30,4 +30,5 @@ class QuickstartUser(HttpUser):
         response = self.client.post("/predict", data=json.dumps(data), headers=headers, name="predict")
         expected_response = {"prediction": [20.353731771344123]}
         response_json = response.json()
-
+        if response_json == expected_response:
+            print("THE APP HAS RETURNED THE CORRECT PREDICTION")
