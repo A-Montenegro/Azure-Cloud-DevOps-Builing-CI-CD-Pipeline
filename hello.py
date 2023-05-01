@@ -46,16 +46,5 @@ def predict():
     prediction = list(clf.predict(scaled_payload))
     return jsonify({'prediction': prediction})
 
-def toyou(x):
-    return "hi %s" % x
-
-
-def add(x):
-    return x + 1
-
-
-def subtract(x):
-    return x - 1
-    
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
