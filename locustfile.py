@@ -1,11 +1,37 @@
-from locust import HttpUser, between, task
+from locust import HttpUser, task, between, HttpLocust, TaskSet, ResponseError
+import json
 
-class MyUser(HttpUser):
+class QuickstartUser(HttpUser):
     wait_time = between(1, 2)
-
-    @task
-    def test_predict_endpoint(self):
+    
+    @task(1)
+    def test_predict(self):
         headers = {'Content-Type': 'application/json'}
-        data = '{"CHAS":{"0":0},"RM":{"0":6.575},"TAX":{"0":296.0},"PTRATIO":{"0":15.3},"B":{"0":396.9},"LSTAT":{"0":4.98}}'
-        self.client.post("/predict", headers=headers, data=data)
+        data = {
+            "CHAS": {
+                "0": 0
+            },
+            "RM": {
+                "0": 6.575
+            },
+            "TAX": {
+                "0": 296.0
+            },
+            "PTRATIO": {
+                "0": 15.3
+            },
+            "B": {
+                "0": 396.9
+            },
+            "LSTAT": {
+                "0": 4.98
+            }
+        }
+        response = self.client.post("/predict", data=json.dumps(data), headers=headers, name="predict")
+        if response.status_code != 200:
+            raise ResponseError("Non-200 response: %s" % response.status_code)
+        expected_response = {"prediction": [20.353731771344123]}
+        response_json = response.json()
+        if response_json != expected_response:
+            raise ResponseError("Unexpected response body: %s" % response.text)
 
