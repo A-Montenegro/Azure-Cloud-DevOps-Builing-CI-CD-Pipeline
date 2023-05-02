@@ -16,7 +16,10 @@ The second pipeline “main_flaskalberto.yml” is used to build and deploy an artif
 1. Execute the “make all” command and check that the output is correct, and the hello.py application is validated:
 
 
-2. Push a commit to your code repository and chech that both pipelines are triggered:
+2. Push a commit to your code repository and check that both pipelines are triggered:
+3. The pipeline “pythonapp.yml” should build the artifact correctly
+4. The pipeline “main_flaskalberto.yml” should build the artifact and deploy the application correctly to your Azure Cloud environment.
+5. The deployed application can be tested the file “locustfile.py”
 
 
 ### Demo on Youtube
