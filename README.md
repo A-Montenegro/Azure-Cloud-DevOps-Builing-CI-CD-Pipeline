@@ -27,5 +27,5 @@ The second pipeline “main_flaskalberto.yml” is used to build and deploy an a
 
 ### Demo on Youtube
 The complete demonstration of the whole process can be watched in this Youtube video:
-The youtube link should be here
+https://youtu.be/uiDfz1AEr1s
 
