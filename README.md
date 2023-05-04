@@ -27,6 +27,15 @@ The architectural diagram can be checked in the next picture:
 5. The deployed application can be tested the file “locustfile.py”
 ![image](https://user-images.githubusercontent.com/40852884/235793343-bfb1f2d4-e535-4ce0-96e2-8e352260129d.png)
 
+### Trello Board
+https://trello.com/b/vxngigTV/azure-cloud-devops-builing-ci-cd-pipeline
+
+### Project management work sheet:
+https://docs.google.com/spreadsheets/d/1Key2I5VAoHxaLN9Y8aojgV-6-upw1runxFrqr6jj2ho/edit?usp=sharing
+
+### Badges
+[![Python application test with Github Actions](https://github.com/A-Montenegro/Azure-Cloud-DevOps-Builing-CI-CD-Pipeline/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/A-Montenegro/Azure-Cloud-DevOps-Builing-CI-CD-Pipeline/actions/workflows/pythonapp.yml)
+[![Build and deploy Python app to Azure Web App - flaskalberto](https://github.com/A-Montenegro/Azure-Cloud-DevOps-Builing-CI-CD-Pipeline/actions/workflows/main_flaskalberto.yml/badge.svg)](https://github.com/A-Montenegro/Azure-Cloud-DevOps-Builing-CI-CD-Pipeline/actions/workflows/main_flaskalberto.yml)
 
 ### Demo on Youtube
 The complete demonstration of the whole process can be watched in this Youtube video:
