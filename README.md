@@ -4,6 +4,9 @@
 The target of this project is to create a CI/CD integration between a Github code repository and an Azure App Service. The code contains two workflows (pipelines).
 The first pipeline “pythonapp.yml” is used to build an artifact from the file “hello.py” of the repository. After making the build, the code is validated using the file “test_hello.py”.
 The second pipeline “main_flaskalberto.yml” is used to build and deploy an artifact using the file “app.py”. Once the app is deployed and working in Azure, it can be tested using the file “locustfile.py”
+The architectural diagram can be checked in the next picture:
+![image](https://user-images.githubusercontent.com/40852884/236322817-524e9928-3456-4587-90d1-d8dea4b25bd1.png)
+
 
 ### Getting Started
 1. Clone this project to your own code repository.
